@@ -1,20 +1,16 @@
 // Sample Input:
-// countWordOccurrences("I love typescript", "typescript");
+// removeDuplicates([1, 2, 2, 3, 4, 4, 5])
 
 // Sample Output:
-// 1;
+// [1, 2, 3, 4, 5]
 
-// console.log(countWordOccurrences("I love typescript", "typescript"))
+// console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 3,2,5]))
 
 {
-    const countWordOccurrences = (text: string, word: string) : number =>{
-
-        const textArray = text.split(" ")
-
-        const resultArray = textArray.filter( singleWord => singleWord === word)
-        const result = resultArray.length
-        
-        return result
-
+    //
+    const removeDuplicates = (numbers: number[]): number[] => {
+        const uniqueArray = numbers.filter((num, index) => numbers.indexOf(num) === index);
+        return uniqueArray; 
     }
+    //
 }
